@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import './calculate.scss';
 import Calc from './Calc';
 import History from './History';
 
-function App() {
-  const [histories, setHistories] = useState([]);
-  return (
-    <div className="App">
-      <div className="Container">
-        <Calc setHistories={setHistories} />
-        <History histories={histories} />
-      </div>
-    </div>
-  );
+class App extends Component {
+
+	render() {
+		return (
+			<div className="App">
+				<div className="Container">
+					<Calc />
+					<History />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
