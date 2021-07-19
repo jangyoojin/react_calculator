@@ -16,7 +16,7 @@ class App extends Component {
 				<div className="Container">
 					<Calc onChangePage={function(equa){
 						this.setState({
-							history: this.props.history.concat(equa)
+							history: this.state.history.concat(equa)
 						})
 					}.bind(this)}/>
 					<History history={this.state.history} />
